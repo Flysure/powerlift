@@ -6,8 +6,11 @@
           <a data-toggle="collapse" href="#collapse1">Workouts <%= link_to "+", new_workout_url %></a>
         </h4>
       </div>
+      <% @workouts.each do |workout| %>
       <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body"> sample workout. </div>
+        <div class="panel-body"> <%= link_to workout.name, workout %> </div>
       </div>
+      <% end %>
+
     </div>
   </nav>
