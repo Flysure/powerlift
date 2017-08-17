@@ -51,6 +51,11 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /addWeek
+  def addWeek
+    @workout.try.week.create()
+  end
+
   # DELETE /workouts/1
   # DELETE /workouts/1.json
   def destroy

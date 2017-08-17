@@ -4,6 +4,12 @@
   <strong>Name:</strong>
   <%= @workout.name %>
 </p>
+<p>
+Click to add Weeks <%= link_to "+", addWeek_workout_path, method: :post %>
+</p>
+  <%= @workout.week.each do |week| %>
+    <%= week.id %>
+  <% end %>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
