@@ -1,0 +1,42 @@
+<%= form_with(model: excersize, local: true) do |form| %>
+  <% if excersize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(excersize.errors.count, "error") %> prohibited this excersize from being saved:</h2>
+
+      <ul>
+      <% excersize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :excersize_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reps %>
+    <%= form.number_field :reps, id: :excersize_reps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.number_field :weight, id: :excersize_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sets %>
+    <%= form.number_field :sets, id: :excersize_sets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :week_id %>
+    <%= form.number_field :week_id, id: :excersize_week_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
