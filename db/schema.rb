@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817013236) do
-
-  create_table "excersizes", force: :cascade do |t|
-    t.string "name"
-    t.integer "reps"
-    t.integer "weight"
-    t.integer "sets"
-    t.integer "week_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "weeks", force: :cascade do |t|
-    t.text "excersize"
-    t.integer "workout_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170816213956) do
 
   create_table "workouts", force: :cascade do |t|
     t.string "name"
